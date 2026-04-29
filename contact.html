@@ -1,7 +1,10 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
 <title>Contact - STR Consulting Engineers Ltd</title>
 <link rel="stylesheet" href="assets/styles.css">
-</head><body>
+</head>
+<body>
 
 <header>
 <div style="display:flex;align-items:center;gap:15px;">
@@ -19,11 +22,51 @@
 <div class="container">
 <div class="card">
 <h2>Contact Us</h2>
+
 <p>Nairobi, Kenya</p>
 <p>Email: Admin@strconsultingengineersltd.org</p>
 <p>Phone: +254119306050</p>
-<a class="btn" href="https://wa.me/254119306050">WhatsApp</a>
+
+<br>
+
+<h3>Send Email Request</h3>
+
+<form action="https://formspree.io/f/xrbqkqwe" method="POST">
+
+<p>
+<input type="text" name="company" placeholder="Company Name" style="width:100%;padding:12px" required>
+</p>
+
+<p>
+<input type="email" name="email" placeholder="Email Address" style="width:100%;padding:12px" required>
+</p>
+
+<p>
+<input type="text" name="phone" placeholder="Phone Number" style="width:100%;padding:12px">
+</p>
+
+<p>
+<textarea name="message" placeholder="Service required" style="width:100%;padding:12px;height:120px" required></textarea>
+</p>
+
+<button class="btn" type="submit">Send Email</button>
+
+</form>
+
+<br><br>
+
+<h3>Or Contact via WhatsApp</h3>
+
+<a class="btn" href="https://wa.me/254119306050" target="_blank">
+Send WhatsApp Message
+</a>
+
 </div>
 </div>
-<div class="footer">© 2017 STR Consulting Engineers Ltd. All rights reserved.</div>
-</body></html>
+
+<div class="footer">
+© 2017 STR Consulting Engineers Ltd. All rights reserved.
+</div>
+
+</body>
+</html>
