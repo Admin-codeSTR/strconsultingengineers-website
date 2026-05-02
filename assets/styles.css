@@ -216,3 +216,55 @@ video {
 .services-content ul {
   line-height: 1.8;
 }
+/* SERVICES HERO */
+.services-hero {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+}
+
+/* BACKGROUND */
+.services-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* SLIDES */
+.bg-slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transform: scale(1);
+  transition: opacity 1.5s ease-in-out, transform 6s ease-in-out;
+}
+
+/* ACTIVE SLIDE */
+.bg-slide.active {
+  opacity: 1;
+  transform: scale(1.08); /* slow zoom */
+}
+
+/* DARK OVERLAY */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 1;
+}
+
+/* CONTENT */
+.services-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* CAPTION ANIMATION */
+#service-caption {
+  transition: opacity 0.5s ease;
+}
