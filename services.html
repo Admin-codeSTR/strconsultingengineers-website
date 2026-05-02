@@ -1,7 +1,10 @@
-<!DOCTYPE html><html><head>
+<!DOCTYPE html>
+<html>
+<head>
 <title>Services - STR Consulting Engineers Ltd</title>
 <link rel="stylesheet" href="assets/styles.css">
-</head><body>
+</head>
+<body>
 
 <header>
 <div style="display:flex;align-items:center;gap:15px;">
@@ -17,17 +20,39 @@
 </header>
 
 <div class="container">
-<div class="card">
+
+<!-- SERVICES WITH BACKGROUND SLIDER -->
+<div class="card services-hero">
+
+<!-- BACKGROUND IMAGES -->
+<div class="services-bg">
+<img src="assets/service1.jpg" class="bg-slide active">
+<img src="assets/service2.jpg" class="bg-slide">
+<img src="assets/service3.jpg" class="bg-slide">
+</div>
+
+<!-- OVERLAY -->
+<div class="overlay"></div>
+
+<!-- CONTENT -->
+<div class="services-content">
 <h2>Services</h2>
+
 <ul>
-<li>Line Installation & Commissioning</li>
-<li>Preventive Maintenance</li>
-<li>Breakdown Support</li>
-<li>Automation & Controls</li>
+<li>Bottling Line Installation & Commissioning</li>
+<li>Preventive & Corrective Maintenance</li>
+<li>Breakdown Support & Troubleshooting</li>
+<li>Automation & Controls Support</li>
 <li>OEM Equipment Integration</li>
+<li>Line Optimization & Efficiency Improvements</li>
+<li>Project Engineering & Consulting</li>
 </ul>
 </div>
+
 </div>
+
+</div>
+
 <div class="footer" style="text-align:center;">
 © 2017 - <span id="year"></span> STR Consulting Engineers Ltd. All rights reserved.
 
@@ -40,9 +65,22 @@
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
+
+/* BACKGROUND SLIDER */
+let slides = document.querySelectorAll(".bg-slide");
+let index = 0;
+
+setInterval(() => {
+  slides[index].classList.remove("active");
+  index = (index + 1) % slides.length;
+  slides[index].classList.add("active");
+}, 4000);
 </script>
+
 <!-- FLOATING WHATSAPP BUTTON -->
 <a href="https://wa.me/254119306050" class="whatsapp-float" target="_blank">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
-</body></html>
+
+</body>
+</html>
